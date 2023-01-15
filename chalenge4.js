@@ -76,12 +76,16 @@ var isTruthy = function(param) {
 
   carro.addPessoas = function(numeroPessoas){
     var totalPessoas = carro.quantidadePessoas + numeroPessoas;
-    if(carro.quantidadePessoas === carro.assentos){
+    if(carro.quantidadePessoas === carro.assentos && totalPessoas >= carro.assentos){
       return 'O carro já está lotado'
     }
 
     if(totalPessoas > carro.assentos){
-      return `Só cabem mais  pessoas no carro.`
+      var pessoasCabem = carro.assentos - carro.quantidadePessoas;
+      if(pessoasCabem === 1){
+        return `Só cabe mais ${pessoasCabem} pessoa no carro.`
+      }
+      return `Só cabem mais ${pessoasCabem} pessoas no carro.`
   }
 
   carro.quantidadePessoas += numeroPessoas;
@@ -89,6 +93,14 @@ var isTruthy = function(param) {
 
 }
 
-  console.log(carro.addPessoas(3))
-  console.log(carro.addPessoas(2))
+console.log(carro.addPessoas(2))
+console.log(carro.addPessoas(-4))
+console.log(carro.addPessoas(3))
+console.log(carro.addPessoas(3))
+console.log(carro.addPessoas(1))
+console.log(carro.addPessoas(1))
+
+
+
+  
  
