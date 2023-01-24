@@ -1,4 +1,4 @@
-var chandler = ['duck', 'monica', 'undefined job', 'shut-up', 'tecnhology' ]
+let chandler = ['duck', 'monica', 'undefined job', 'shut-up', 'tecnhology' ]
 
 function friendsTvShow(friends) {
     return friends[1];
@@ -11,7 +11,7 @@ function myfunction2(arr , index){
 
 }
 
-var monica = ['organizer', 'chandler', 'cook', 7, ['wedding', 'May, 15th'] ]
+let monica = ['organizer', 'chandler', 'cook', 7, ['wedding', 'May, 15th'] ]
 
 console.log(myfunction2(monica, 0))
 console.log(myfunction2(monica, 1))
@@ -55,3 +55,16 @@ console.log(`O autor do ${booksName} é ${book(booksName).author}`)
 console.log(`A editora do ${booksName} é ${book(booksName).editor}`)
 
 console.log(book())
+console.log("*****************")
+
+let obj ={
+    'segunda': 'treino1-sup+ corrida',
+    'terça': 'treino1-inferiores',
+    'quarta':  'treino2-sup+ corrida'
+}
+
+function myFunction_class(arg){
+    return arg.quarta // aqui ja indico qual prop quero que seja trazida com o objeto
+}
+
+console.log(myFunction_class(obj))
