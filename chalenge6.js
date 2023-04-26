@@ -1,38 +1,57 @@
-//Operador vírgula
-var a, b =2, c;
-//js interpreta que estou declarando 3 variáveis
-//a vírgula junta várias expressões em uma única expressão
+const championship = 'Brasilerião Série C'
+console.log(championship)
 
-function myFunc(){
-    var x = 0;
-    return (x += 1, x) // return ++x
+const teams = ['Figueirense', 'Ponte Preta','Corinthians', 'São Paulo', 'Palmeiras']
+console.log('Times que estão participando do campeonato', teams)
+
+function showTeamPosition(position){
+    if(position < 1 || position > 5){
+        return 'Não temos a informação do time que está nessa posição!'
+    }
+    return 'O time que está em ' + position +'lugar é o ' + teams[position - 1] + '.';
 }
-console.log(myFunc())
 
-let segunda = 'superiores'
-let terca = 'inferiores'
-let quarta = 'superiores'
-let sexta = 'inferiores'
-//operador ternário ? => if , 'Mesmo treino' => return se verdadeiro 'treino diferente' => return se falso
-let dia = segunda == quarta ? 'Mesmo treino' : 'Treino diferente';
-console.log(dia)
+console.log(showTeamPosition(1))
+console.log(showTeamPosition(2))
+console.log(showTeamPosition(3))
+console.log(showTeamPosition(4))
+console.log(showTeamPosition(8))
 
-//estrutura condicional switch
-//qual dia da semana tem o treino igual ao do par (segunda)?
-function diaSemana(segunda) {
-    switch(segunda) {
-        case terca:
-            console.log('Terça')
+
+let counter = 20;
+while(counter <=30 ){
+    console.log(counter++);
+}
+
+let listColor = ['white', 'blue', 'pink', 'orange','purple'];
+let listHex = ['#FFFFFF', '#0000FF', '#FFC0CB', '#FFA500', '#800080']
+let hex = 'white'
+function converToHex(hex){
+    switch(hex){
+        case 'white':
+            console.log(listHex[0])
             break;
-        case quarta:
-            console.log('Quarta')
+        case 'blue':
+            console.log(listHex[1])
             break;
-        case sexta:
-            console.log('Sexta')
+         case 'pink':
+            console.log(listHex[2])
+            break;
+        case 'orange':
+            console.log(listHex[3])
+            break;
+        case 'purple':
+            console.log(listHex[4])
             break;
         default:
-            console.log('default')
+            console.log('Não temos a cor ' + hex)
+       
     }
 }
+console.log(converToHex('rosa'))
 
-console.log(diaSemana(terca))
+
+
+
+
+
